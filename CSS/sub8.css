@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+#header{
+    background-color: #333;
+    position: relative;
+}
+#header .container{
+    width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+#header .container h1{}
+#header .container h1 a{
+    color: #fff;
+    display: block;
+    line-height: 50px;
+}
+#header .container nav{
+    
+}
+#header .depth-01{
+    display: flex;
+}
+#header .depth-01 > li{
+    position: relative;
+}
+#header .depth-01 > li > a{
+    color: #fff;
+    display: block;
+    line-height: 50px;
+    padding: 0 30px;
+}
+#header .depth-02{
+    text-align: center;
+    overflow: hidden;
+    height: 0;
+    transition: all 0.6s ease-in-out;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    z-index: 99;
+}
+#header .depth-02 li{}
+#header .depth-02 li a{
+    color: #fff;
+    display: block;
+    line-height: 50px;
+    border-bottom: solid 1px #fff;
+}
+#header .depth-02 li:last-child a{
+    border-bottom: 0;
+}
+#header .depth-01 li:hover > a,
+#header .depth-02 li:hover a{
+    background-color: #fff;
+    color: #333;
+}
+#header .fake{
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    left: 0;
+    height: 0;
+    overflow: hidden;
+    background-color: #ff0;
+    transition: all 0.6s ease-in-out;
+}
+#header .depth-01:hover .depth-02{
+    height: 254px;
+}
+#header .container nav:hover +.fake{
+    height: 254px;
+    z-index: 1;
+}
+#header .container h1:hover a i::before{
+    content: "\ea1c";
+}
+.content .main-banner{
+    height: 400px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8)), url('../img/img-bakugo.jpg') no-repeat left top;
+    background-size: cover;
+}
+.content .container{
+    width: 1280px;
+    margin: 0 auto;
+}

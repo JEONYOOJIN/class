@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="./CSS/join.css">
+</head>
+<body>
+    <form id="join" action="./join_s.html">
+        <fieldset>
+            <p>
+                <span class="form-tltle">이름 :</span>
+                <input type="text" name="name" placeholder="이름을 입력해 주세요." required autofocus>
+            </p>
+            <p>
+                <span class="form-tltle">아이디 :</span>
+                <input type="text" name="ID" placeholder="영문 및 숫자만 가능" required>
+            </p>
+            <p>
+                <span class="form-tltle">비밀번호 :</span>
+                <input type="password" name="PW" placeholder="영문 및 숫자만 가능" required>
+            </p>
+            <p>
+                <span class="form-tltle">성별 :</span>
+                <input type="radio" id="man" name="gender" value="man" checked>
+                <label for="man">남자</label>
+                <input type="radio" id="woman" name="gender" value="woman">
+                <label for="woman">여자</label>
+                <input type="radio" id="nocomment" name="gender" value="nocomment">
+                <label for="nocomment">말하고싶지않음</label>
+            </p>
+            <p>
+                <span class="form-tltle">관심사 :</span>
+                <input type="checkbox" id="a" value="check-01" name="check-fav" checked>
+                <label for="a">a</label>
+                <input type="checkbox" id="b" value="check-02" name="check-fav">
+                <label for="a">b</label>
+                <input type="checkbox" id="c" value="check-03" name="check-fav">
+                <label for="a">c</label>
+            </p>
+            <p>
+                <span class="form-tltle">증명사진 :</span>
+                <input type="file" name="img-file">
+            </p>
+            <p>
+                <span class="form-tltle">날짜 :</span>
+                <input type="date" name="date" min="2024-01-01" max="2024-12-31" step="1">
+            </p>
+            <p>
+                <span class="form-tltle">연령대 :</span>
+                <input type="number" name="age" placeholder="10" min="10" max="100" step="10">
+            </p>
+            <p>
+                <span class="form-tltle">선호하는 컬러 :</span>
+                <input type="color" name="color-01">
+                <input type="color" name="color-01">
+                <input type="color" name="color-01">
+            </p>
+            <p>
+                <span class="form-tltle">지역 선택 :</span>
+                <select name="city">
+                    <optgroup label="숫자">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </optgroup>
+                    <optgroup label="알파벳">
+                        <option value="a">a</option>
+                        <option value="b">b</option>
+                        <option value="c">c</option>
+                    </optgroup>
+                </select>
+            </p>
+            <p>
+                <span class="form-tltle">회원가입 코멘트 :</span>
+                <textarea name="comment" placeholder="가입인사를 남겨주세요" rows="6" cols="30"></textarea>
+            </p>
+            <p>
+                <input type="submit" value="회원가입" onclick="suc()">
+                <!-- 여기서 써진 벨류는 버튼에 보여져야하는 값 -->
+                <input type="reset" name="reset" value="다시작성하기">
+            </p>
+        </fieldset>
+    </form>
+    <script>
+        function suc(){
+            confirm('진짜 가입하시겠습니까?')
+            prompt('추천인을 작성해주세요')
+            alert('가입완료되었습니다.')
+        }
+    </script>
+</body>
+</html>

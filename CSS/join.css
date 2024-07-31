@@ -1,0 +1,17 @@
+input[type="text"]{
+    width: 300px;
+    outline: none;
+    text-indent: 3em;
+    /* 인던트는 들여쓰기 */
+    /* em은 배수 */
+    letter-spacing: 2px;
+    /* 자간 */
+}
+span[class="form-title"]{
+    display: block;
+}
+/* []는 태그의 속성으로도 부를 수 있음 */
+input[name="gender"]{
+    accent-color: #ff0;
+    /* 지정한 컬러색이 짙으면 체크되는 색 라인이 연해지고, 컬러색 연하면 체크되는 색라인이 진해짐 */
+}
