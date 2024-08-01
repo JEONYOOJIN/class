@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ol,ul,dl{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        #family{ 
+            width: 300px;
+            margin: 500px auto 0;
+            text-align: center;
+            position: relative;
+        }
+        #family input{
+            display: none;
+            /* 체크박스를 눌렀을 때 실제로는 선택됐다가 풀렸다가 하고 있는 건데 눈에 보이지 않을 뿐이다 */
+        }
+        #family label{
+            display: block;
+            line-height: 50px;
+            background-color: #333;
+            color: #fff;
+        }
+        #family ul{
+            position: absolute;
+            width: 100%;
+            left: 0;
+            bottom: 100%; /*패밀리사이트 버튼의 밑으로부터 100% 채워서 패밀리 사이트버튼 위쪽에 붙여 움직이게 하려고*/
+            height: 0;
+            overflow: hidden;
+            transition: all 0.4s ease-in-out;
+        }
+        #family ul li{}
+        #family ul li a{
+            display: block;
+            line-height: 50px;
+            background-color: #333;
+            color: #fff;
+            border-bottom: solid 1px #fff;
+        }
+        #family input:checked ~ ul{
+            height: 255px;
+        }
+        /* 실제 체크되는 애는 input 임. 절대 헷갈리지 말 것
+        family input에 체크했을 때 input의 동생들 중 ul아 들어 */
+
+        /* 좋은 예시는 아니다.
+        접근성때문에 좋은 방법은 아니다. */
+    </style>
+</head>
+<body>
+    <div id="family">
+        <input type="checkbox" id="checkBox">
+        <label for="checkBox">패밀리사이트</label>
+        <ul>
+            <li><a href="#">패밀리사이트1</a></li>
+            <li><a href="#">패밀리사이트2</a></li>
+            <li><a href="#">패밀리사이트3</a></li>
+            <li><a href="#">패밀리사이트4</a></li>
+            <li><a href="#">패밀리사이트5</a></li>
+        </ul>
+    </div>
+</body>
+</html>
