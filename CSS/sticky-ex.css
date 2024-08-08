@@ -1,0 +1,80 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+ul, ol, dl{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+#top-container{
+    width: 80vw;
+    height: 300vh;
+    margin: 0 auto;
+}
+#top-container section{
+}
+#top-container section a{
+    background-color: #333;
+    color: #fff;
+    display: block;
+    line-height: 4;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+}
+#header{
+    position: sticky;
+    top: 0;
+    background-color: #ccc;
+    color: #333;
+    text-align: center;
+    line-height: 2;
+}
+#header p{
+    display: inline-block;
+    color: #000;
+    font-size: 2em;
+}
+.transform{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #ffff00;
+    transition: all 1s linear;
+    /* 변형의 기준점  = tranform-origin*/
+    /* transform-origin: 0 0; = transform-origin: left top;  같은 의미*/
+    /* 왼쪽 상단기준으로 나타남 */
+    /* transform-origin: 100% 100%; = transform-origin: right bottom; 같은 의미 */
+    /* 오른쪽 하단 기준으로 나타남 */
+    /* transform-origin: center; 기본값 */
+    /* 기본값은 센터임 */
+}
+#header p:hover + .transform{
+    /* transform: scale(2); 크기 2배 [2 -> n -> 자연수]*/
+    /* transform: scaleX(2); X축으로만 2배 늘어남*/
+    /* transform: scaleY(2); Y축으로만 2배 늘어남*/
+    /* transform: translate(30px, 50px); X축으로 30만큼 Y축으로 50만큼 이동*/
+    /* transform: translate(50px); X축으로 50px만큼 이동 */
+    /* transform: translate(10px); Y축으로 10만큼 이동 */
+    /* transform: rotate(720deg); 720도 돌리기 */
+    /* transform: skew(10deg, 50deg); 비틀기 */
+    /* transform: skewX(45deg); X축 기준 45도 비틀기 */
+    /* transform: skewY(45deg); Y축 기준 45도 비틀기 */
+    /* transform: translate(100px) rotate(1200deg); X축으로 100px 이동하면서 1200도 돌리기 */
+}
+.topBtn{
+    display: block;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+    line-height: 200px;
+    text-align: center;
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+}
