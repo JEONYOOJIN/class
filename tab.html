@@ -49,9 +49,9 @@
             border: solid 1px #000;
             box-sizing: border-box;
             z-index: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            display: flex; /*ul을 정렬시키기 위해서 ab박스를 컨테이너로 만들어줌*/
+            justify-content: center; /*ul을 가로 정렬 가운데*/
+            align-items: center; /*ul을 세로 정렬 가운데*/
         }
         #tab > li input:checked ~ .ab-box{ /*인풋에 체크드 걸렸을 때 동생 태그 중에 앱박스야 들어*/
             z-index: 99;
