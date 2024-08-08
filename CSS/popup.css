@@ -1,0 +1,42 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#open-btn{
+    display: block;
+    font-size: 2em;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    line-height: 4;
+    width: 20%;
+    border: 0;
+    margin: 100px auto 0;
+    box-shadow: 15px 15px 20px;
+    cursor: pointer;
+    /* 이거 안 했을 때는 마우스 모양이 안 변하는데, 얘 넣으면 마우스 모양이 호버했을 때처럼 바뀜 */
+}
+#popup-box{
+    position: fixed;
+    width: 600px;
+    height: 400px;
+    background-color: #333;
+    color: #fff;
+    top: calc(50% - 200px); /*50% 아래쪽으로 내려오는데 높이의 절반만큼 내려와라*/
+    left: calc(50% - 300px); /*50% 오른쪽으로 이동하는데 위드의 절반만큼 이동해라*/
+    text-align: right;
+    display: none;
+}
+#popup-box span{
+    display: inline-block;
+    font-size: 3em;
+    cursor: pointer;
+    padding: 20px;
+}
+#popup-box p{
+    margin-top: 100px;
+    text-align: center;
+}
+.show{
+    display: block !important;
+}
