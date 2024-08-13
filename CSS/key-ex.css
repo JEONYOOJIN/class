@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+ul, ol, dl{
+    list-style: none;
+}
+.ball{
+    position: fixed;
+    left: calc(50% - 120px);
+    width: 200px;
+    height: 200px;
+    background-color: #333;
+    border-radius: 50%;
+    border-top: solid 20px #f00;
+    border-bottom: solid 20px #f00;
+    border-left: solid 20px #00f;
+    border-right: solid 20px #00f;
+    animation: move 2s ease-in-out 0.5s infinite alternate both running;
+    background-image: url('../img/golden-01.jpg');
+    /*
+    이걸 안 해주면 굴러가는 애니메이션을 못함
+    포지션 값으로 하면 왼쪽 상단이 회전축이 돼서 굴러가는 애니메이션할 때 이상해짐
+    transform-origin: center; 이게 기본값이니까 굳이 안 써줘도 됨
+    생략가능하나 단, 애니메이션에 transform 값이 있어야 함
+    트랜스폼으로 움직일 때 기본값이 센터임
+    */
+}
+@keyframes move{
+    0%{
+        transform: translateX(0) translateY(0);
+        /* transform: rotate(0deg); */
+    }
+    30%{
+        transform: translateX(60px) translateY(100px);
+    }
+    80%{
+        transform: translateX(0) translateY(200px);
+    }
+    100%{
+        transform: translateX(60px) translateY(300px);
+        /* transform: rotate(360deg); */
+    }
+}
+/* 포지션 값이 있어야 위치값이 먹음 */
+
+/*
+vendeor prefix(벤더 프리픽스)
+각 브라우저에서 판독이 가능한 접두어를 붙여서 해당 브라우저에 인식할 수 있게 하는 것
+종류)
+@-webkit-keyframes -> 크롬, 사파리 기준
+@-moz-keyframes -> 파이어폭스
+@-o-keyframes -> 오페라
+@-ms-keyframes -> 익스플로어
+
+<먼저 걸러먹고 통틀어서 먹게 하는 경우>
+-webkit-animation: move 2s ease-in-out 0.5s infinite alternate both running;
+-moz-animation: move 2s ease-in-out 0.5s infinite alternate both running;
+-o-animation: move 2s ease-in-out 0.5s infinite alternate both running;
+-ms-animation: move 2s ease-in-out 0.5s infinite alternate both running;
+-animation: move 2s ease-in-out 0.5s infinite alternate both running;
+(이게 표준속성/ 표준속성이 우선시 되어야 하니까 나중에 쓰여야 하는 게 맞음
+우리가 쓰는 언어는 인터프리터 언어-순차적으로 읽는다 니까
+마지막에 쓰여야 함
+표준속성 우선 시 해야함 = 밑에 있어야 함 = 원칙)
+
+
+크로스 브라우징
+최대한 많은 종류의 웹 브라우저에서 정상적으로 작동하는 웹페이지를 만드는 방법
+*/
+/*
+스크립트를 가장 마지막에 넣는 이유는
+스크립트를 쓰면서 태그를 자꾸 조작하는데
+css 밑, 태그 위에 있으면 태그가 불러와져있지 않은 상태인데 조작하려고 드니까
+그러면 태그랑 시간차가 발생하면 안 먹는다
+그래서 안전빵으로 도큐멘트 레디를 먹는 건데 그거조차도 안 먹을 때가 있어서
+안전빵으로 태그가 다 불러와진 다음에 스크립트를 넣는다.
+*/
