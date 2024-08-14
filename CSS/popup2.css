@@ -1,0 +1,90 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#open-btn{
+    display: block;
+    font-size: 2em;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    line-height: 4;
+    width: 20%;
+    border: 0;
+    margin: 100px auto 0;
+    box-shadow: 15px 15px 20px;
+    cursor: pointer;
+    /* 이거 안 했을 때는 마우스 모양이 안 변하는데, 얘 넣으면 마우스 모양이 호버했을 때처럼 바뀜 */
+}
+#popup-box{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 4);
+    display: none;
+    top: 0;
+    left: 0;
+    /*
+    max-width: 800px;
+    위드값이 최대 800px까지만 늘어나
+    max-height: 400px;
+    헤이트값이 최대 400px까지만 늘어나
+    min-width: 300px;
+    위드값이 최소 300px까지만 줄어들어
+    min-height: 200px;
+    헤이트값이 최소 200px까지만 줄어들어
+    */
+    /*
+    width: calc(100vw - 40px);
+    background-color: #333;
+    color: #fff;
+    top: calc(50% - 200px);
+    50% 아래쪽으로 내려오는데 높이의 절반만큼 내려와라
+    left: calc(50% - 300px);
+    50% 오른쪽으로 이동하는데 위드의 절반만큼 이동해라
+    text-align: right;
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    */
+    /*
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    
+    이렇게 설정해놓으면 컨텐츠가 항상 중간에 위치하게 됨
+    반응형때 주로 사용
+    앱솔루트랑, 픽스만 먹음
+    */
+}
+#popup-box > div{
+    position: absolute;
+    width: calc(100vw - 400px);
+    height: calc(100vh - 400px);
+    background-color: #fff;
+    color: #000;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: right;
+}
+#popup-box span{
+    display: inline-block;
+    font-size: 3em;
+    cursor: pointer;
+    padding: 20px;
+}
+#popup-box p{
+    margin-top: 100px;
+    text-align: center;
+}
+.show{
+    display: block !important;
+}
