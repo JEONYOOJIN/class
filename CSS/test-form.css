@@ -1,0 +1,130 @@
+.nanum-gothic-regular {
+    font-family: "Nanum Gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;}
+*{
+    padding: 0;
+    margin: 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    font-size: 15px;
+    color: #333;
+}
+input{
+    font-size: 15px;
+}
+#join{
+    width: 500px;
+    background-color: #fff;
+    border: solid 1px #ccc;
+    margin: 200px auto;
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    box-shadow: 10px 10px #ccc;
+}
+#join fieldset{
+    border-style: none;
+    width: 400px;
+}
+#join fieldset h2{
+line-height: 100px;
+}
+input::placeholder{
+    color: #999;
+}
+input[type="text"]{
+    border: 0;
+    display: block;
+    line-height: 50px;
+    width: 100%;
+    border-bottom: solid 1px #ccc;
+    color: #333;
+}
+input[type="password"]{
+    border: 0;
+    line-height: 50px;
+    color: #999;
+    display: block;
+    width: 100%;
+    border-bottom: solid 1px #ccc;
+}
+input[type="submit"]{
+    color: #fff;
+    background-color: #333;
+    width: 100%;
+    line-height: 50px;
+    cursor: pointer;
+    border: 0;
+}
+.auto-login input + label{
+    line-height: 50px;
+}
+.find{
+    text-align: center;
+    margin-top: 20px;
+    display: block;
+}
+.find a{
+    display: inline-block;
+}
+#login-box .find a::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 1px;
+    background-color: #ccc;
+}
+#login-box .find a:hover::after{
+    width: 100%;
+}
+#login-box .find span{
+    display: inline-block;
+    width: 2px;
+    height: 12px;
+    background-color: #ccc;
+    margin: 0 10px;
+}
+.middle-line{
+    display: block;
+    width: 100%;
+    height: 50px;
+    border-bottom: solid 1px #ccc;
+}
+#social-login{
+    margin: 30px auto;
+    width: 360px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+#social-login .facebook a{
+    display: block;
+    color: #fff;
+    line-height: 30px;
+    width: 100px;
+    background-color: #3b5997;
+    border-radius: 5px;
+}
+#social-login .google a{
+    display: block;
+    color: #333;
+    line-height: 30px;
+    width: 100px;
+    background-color: #ffffff;
+    border: solid 1px #ccc;
+    border-radius: 5px;
+    box-sizing: border-box
+}
+#social-login .naver a{
+    display: block;
+    color: #fff;
+    line-height: 2em;
+    width: 100px;
+    background-color: #3dbb19;
+    border-radius: 5px;
+}
