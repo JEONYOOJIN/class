@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10차 평가-회원가입/로그인-수정</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/test-form2.css">
+</head>
+<body>
+    <form id="join" class="nanum-gothic-regular">
+        <fieldset>
+            <h2>
+                로그인
+            </h2>
+            <div id="login-box">
+                <ul class="idpw">
+                    <li><input type="email" placeholder="이메일 주소" name="email"></li>
+                    <li><input type="password" placeholder="비밀번호" name="PW"></li>
+                </ul>
+                <span class="auto-login">
+                    <input type="checkbox" id="auto-login-check" checked>
+                    <label for="auto-login-check">로그인 상태 유지</label>
+                </span>
+                <span>
+                    <input type="submit" value="로그인">
+                </span>
+                <ul class="find">
+                    <li><a href="#">아이디 찾기</a></li>
+                    <li><a href="#">비밀번호 찾기</a></li>
+                    <li><a href="#">회원가입</a></li>
+                </ul>
+                <span class="middle-line"></span>
+                <ul id="social-login">
+                    <li class="facebook"><a href="#">페이스북</a></li>
+                    <li class="google"><a href="#">구글</a></li>
+                    <li class="naver"><a href="#">네이버</a></li>
+                </ul>
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>
