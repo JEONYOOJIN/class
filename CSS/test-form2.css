@@ -1,0 +1,160 @@
+.nanum-gothic-regular {
+    font-family: "Nanum Gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;}
+*{
+    padding: 0;
+    margin: 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    font-size: 14px;
+    color: #444;
+}
+input{
+    font-size: 14px;
+    color: #444;
+}
+#join{
+    width: 500px;
+    background-color: #f2f2f2;
+    border: solid 1px #ccc;
+    margin: 200px auto;
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    padding: 20px;
+}
+#join fieldset{
+    border-style: none;
+    width: 400px;
+}
+#join fieldset h2{
+    line-height: 100px;
+    color: #f2562e;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+}
+#login-box{
+    background-color: #fff;
+    border: solid 1px #ccc;
+    padding: 30px;
+}
+input::placeholder{
+    color: #aaa;
+}
+input[type="email"]{
+    border: 0;
+    display: block;
+    line-height: 50px;
+    width: 100%;
+    border-bottom: solid 1px #ccc;
+    color: #444;
+}
+input[type="password"]{
+    border: 0;
+    line-height: 50px;
+    color: #444;
+    display: block;
+    width: 100%;
+    border-bottom: solid 1px #ccc;
+}
+input[type="submit"]{
+    color: #fff;
+    background-color: #f2562e;
+    width: 100%;
+    line-height: 50px;
+    cursor: pointer;
+    border: 0;
+    border-radius: 3px;
+    font-weight: bold;
+}
+input[type="submit"]:hover{
+    background-color: #333;
+}
+.auto-login input + label{
+    line-height: 50px;
+    color: #aaa;
+}
+.find{
+    text-align: center;
+    margin: 20px auto 0;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+}
+.find li::after{
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 10px;
+    border-right: solid 2px #ccc;
+    margin: 0 10px;
+}
+.find li:last-child::after{
+    display: none;
+}
+.find li a{
+    display: inline-block;
+    color: #aaa;
+}
+.find li a::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 1px;
+    background-color: #ccc;
+}
+.find a:hover::after{
+    width: 100%;
+}
+.find span{
+    display: inline-block;
+    width: 2px;
+    height: 12px;
+    background-color: #ccc;
+    margin: 0 10px;
+}
+.middle-line{
+    display: block;
+    width: 100%;
+    height: 50px;
+    border-bottom: solid 1px #ccc;
+}
+#social-login{
+    margin: 30px auto 0;
+    width: 360px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+#social-login .facebook a{
+    display: block;
+    color: #fff;
+    line-height: 30px;
+    width: 100px;
+    background-color: #3b5997;
+    border-radius: 5px;
+}
+#social-login .google a{
+    display: block;
+    color: #333;
+    line-height: 30px;
+    width: 100px;
+    background-color: #ffffff;
+    border: solid 1px #ccc;
+    border-radius: 5px;
+    box-sizing: border-box
+}
+#social-login .naver a{
+    display: block;
+    color: #fff;
+    line-height: 2em;
+    width: 100px;
+    background-color: #3dbb19;
+    border-radius: 5px;
+}
