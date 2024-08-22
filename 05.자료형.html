@@ -9,17 +9,22 @@
     <script>
         let str = '안녕?'
 
+        // 자료는 반드시 타입별로 나뉨
+
+
         // [데이터 타입 크게 8가지로 나뉨]
-        // 문자열 (String)
-        // 숫자 (Number)
-        // 블린 (Booliean) [true, false]
-        // 배열 (Array)
-        // 객체 (Object)
-        // 함수 (Function)
-        // 널 (Null) -> 변수가 의도적으로 '값이없음'을 나타내도록 설정된 상태
+        // 01. 문자열 (String)
+        // 02. 숫자 (Number)
+        // 03. 블리언(블린) (Booliean) [true, false] (또는 불 이라고 함)
+        // 04. 배열 (Array)
+        // 05. 객체 (Object)
+        // 06. 함수 (Function)
+        // 07. 널 (Null) -> 변수가 의도적으로 '값이없음'을 나타내도록 설정된 상태
         // (변수를 명시적으로 비워두고 싶을 때 사용하는 값)
         // (프로그래머가 변수에 의도적으로 '값이 없음'을 할당할 때 자주 사용)
-        // 미정의 (Undefined) -> 변수가 선언되었지만, 아직 값이 할당되지 않은 상태.
+        // 변수가 있긴 있는데 값이 없다고 명시함
+        // 08. 미정의 (Undefined) -> 변수가 선언되었지만, 아직 값이 할당되지 않은 상태.
+        // 변수가 선언됐는데 초기값이고 뭐고 아무것도 할당 되지 않은 상태
         // (변수 선언 후에 초기화 하지 않으면 기본적으로 undefined 값이 할당됨)
         // (의도적으로 undefined를 할당한느 경우는 거의 없음)
         // *주의* 값이 없는 것과 정해지지 않은 것은 다른 것임
@@ -31,7 +36,7 @@
 
         // 원시형과 창조형으로 나뉨
         /* [원시형]
-            - 변경할 수 없는 값
+            - 변경할 수 없는 값, 한번 생성되면 변경 불가능
             - 새로운 값을 할당하면 기존 값이 아닌 새로운 값이 메모리에 저장됨
             - 변수에 직접 저장됨. 값으로 비교됨. 간단한 값. 숫자, 문자 등
 
@@ -39,18 +44,21 @@
             01. 문자열 (String)
         */
         const string1 = "World"; // 기호를 사용하여 데이터를 만들었음
-        const string2 = `Hello ${string1}`; // 위와 동일
+        const string2 = `Hello ${string1}`; // 위와 동일. 이렇게 쓰는걸 템플릿 리터럴 방식이라고 함
         // 예전 작성법 => 'Hello` + string1
         console.log(string2);
         // 백틱 -> 템플릿 리터럴 = 보관처리
         // 기호를 사용하여 데이터를 만드는 방식 = 리터럴 방식 이라고 함
         // 기호 안에 데이터를 담음으로써 데이터를 생성함
+        // 백틱-> ~을 쉬프트 누르지 않고 누르면 됨
+        // 변수를 부를 때 쓰는 '${}' 이 기호를 '플레이스 홀더'라고 함
+
 
         // 02. 숫자 (Number)
 
         const number = -123; // 양수, 음수를 모두 취급한다.
         // 넘버 데이터 타입은 양수, 음수를 모두 취급한다.
-        const pi = 3.14 // 앞에 숫자가 0일 때는 .14 생략가능 (0.12 = .12)
+        const pi = 3.14 // 앞에 숫자가 0일 때는 .14 생략가능 (0.12 = .12 로 쓸 수 있음)
         console.log(number + 1);
         // 콘솔창 안에서도 연산이 가능함.
         // 초기값 할당이 넘버여서 변수를 끌고 와도 어떤 연산이든 가능하다.
@@ -86,14 +94,168 @@
         // (번외)원하는 소수점까지 잘라내기..
 
         console.log((a + b).toFixed(1));
-        // 소수점 한 자리까지 잘라라~ 단, 문자열이 되어버림(숫자는 파란색으로 표기되어있고, 문자는 검정색임)
-        a랑 b랑 연산할 건데
+        // a랑 b랑 연산할 건데, 소수점 한 자리까지 잘라라~ 단, 투픽스를 쓰면 문자열이 되어버림(숫자는 파란색으로 표기되어있고, 문자는 검정색임)
+        // toFixed(1) -> 소수점 한 자리까지 잘라라
 
-        콘솔창보면 
+        
         console.log(Number((a + b).toFixed(1)));
         // 이번 연산 시 숫자로 자료형 변환
         // 쓸 당시에만 숫자로 변함. 한번 넘버를 썼다고 뒤에도 계속 숫자형으로 변환되는 것이 아님
         // 다음 호출 시, 계속 number냐? == 아니다.
+
+
+        // 03. 블리언(블린) (Booliean)
+        // 불리언 자료형은 참 아니면 거짓밖에 없음
+        const boolT = true;
+        const boolF = false;
+        
+
+        /*
+        if(조건){
+            조건이 부합하면 실행할 실행식
+        }
+        */
+
+        if(boolT){
+            console.log('Hello World')
+        }
+        // >> 이러면 조건이 참 이기 때문에 실행이 됨.
+        // 위 경우에 조건으로 boolF 가 들어간다면 조건이 거짓이기 때문에 실행이 되지 않음
+
+        // undefined, null
+
+
+        // [참조형]
+        // 객체, 배열, 함수와 같은 복합적인 데이터 구조를 포함
+        // 값을 직접 저장하는 것이 아니라, 메모리 상의 '참조'를 통해데이터를 다룸.
+        // 변수에는 실제 데이터가 있는 '메모리의 주소'를 저장함.
+
+
+        // 01. 배열 (Array)
+        //
+        // new 키워드 -> 생성자 함수.
+        // 생성자 함수를 통한 Array 선언.
+        // const car = new Array('kia', 'volvo', 'hyundai');
+        // 이런식으로 배열을 선언할 수가 있다. 근데 너무 복잡해서 이렇게 잘 선언하지는 않음
+
+        /*
+        const car = new Array('kia', 'volvo', 'hyundai')
+        const car = ['kia', 'volvo', 'hyundai']
+            => 두개 서로 같음
+        */
+
+        // [리터럴 방식. 기호를 사용하여 데이터 설정]
+        const car = ['kia', 'volvo', 'hyundai'];
+        // 배열의 아이템, 배열의 요소, array의 엘리먼트 라고도 불림
+        console.log(car);
+        // 0 1 2 순으로 들어가 있는 것을 확인할 수 있음
+        // length 라는 속성이 있는 것을 볼 수 있음. 배열의 길이임.
+        // 몇 개의 배열요소가 들어있는지 확인할 수 있음
+        console.log(car.length);
+        console.log(car[2]);
+        // car에서 두번째 값만 하고 싶을 때 사용
+        // 순서로 조회하는 행위 = '인덱싱' 이라고 함
+
+        // 몇개가 있는 지는 모르겠지만... 맨 마지막 아이템을 조회해야 한다면?
+        console.log(car[car.length-1]); //렝쓰 쓰려면 어떤 랭쓰인지 정확히 써줘야함
+
+        // 02. 객체 (Object)
+
+        const user1 = {
+            name : 'kim',
+            age : 40,
+            gender : 'man'
+        }
+        // 키(key), 벨류(value)로 구성되어 있음
+        // 앞에 오는 것이 키(프로피티라고도 함), 뒤에 오는 것이 벨류(값이라 함)
+        // 쌍따옴표 안에 안 들어가는 애들을 = key 라고 부름
+        // 키에 붙은 값을 벨류라고 부른다.
+        // 더 추가하고 싶으면 ,때려박고 더 추가하면 되고
+        // 마지막 애만 쉼포 안 써주면 됨
+        // json 파일에서 많이 보던 형식임. 이런 형태로 데이터가 넘어옴
+
+
+        console.log(user1);
+        // 오브젝트는 순서라는 개념 자체가 없음. (내가 작성한 순서대로 나오지 않음)
+        // name을 먼저 넣었다고 name이 먼저 나오지 않음.
+
+        console.log(user1.name);
+        console.log(user1['age']);
+
+        const user2 = {
+            name : 'lee',
+            age : 20,
+            parent : user1
+        }
+
+        console.log(user2);
+        // kim이 나오게 해보세요. 단, user2로 접근하세요
+
+        console.log(user2.parent.name);
+        console.log(user2.parent['name']) // -> 이 방법은 추천하지 않음
+        console.log(user2['parent']['name']);
+        // 위 3개 다 같은 값이 나옴
+        // 혼용해서 쓰는 것은 추천하지 않음. .으로 쓸거면 다 .으로 쓰고, []로 쓸거면 다 []쓰는 게 좋음
+
+
+        const users = [user1, user2];
+        // 배열로 묶은 거임
+
+        console.log(user2['name']); // -> 이 방법은 추천하지 않음
+        console.log(user2.name)
+        console.log(users[1]['name'])
+
+
+
+        // 03. 함수 (Function)
+
+        function add (){
+            console.log('Hello world')
+        }
+        // 함수 호출?
+        // 함수 호출 하면 {}안에 실행되는 거임
+        add(); //
+        console.log(add);
+        // f가 풀려서 출력되는 걸 볼 수 있음
+
+        function grtNumber(){
+            return 1234; // 반환하다. 1234 라는 숫자를 뱉어라
+        }
+
+        console.log(grtNumber()); // 1234 리턴해주는 값. 1234 나옴
+
+        console.log(typeof grtNumber); // 타입이 function임
+        console.log(typeof grtNumber()); // 타입이 number임
+        // 소괄호가 붙은 형태 = 함수 호출형태
+        // 함수 이름만 가져오면 함수 자체가 터짐
+        // 완전히 다른 값이 출력되기 때문에 주의해야함
+
+        function hello(name){ //매개변수, 파라미터(parameters) 라고 부름
+            console.log(`hello ${name}`)
+        }
+
+        hello(users[1].parent.name); // 호출할 때는 인자, 아규먼츠(Arguments) 라고 부름
+        // 뭐가 들어가든 데이터를 정확하게만 써주면 들어감
+
+
+        // (번외) Truthy, Faslsy, 참과 거짓
+
+        if(-0){
+            console.log('참');
+        }else{
+            console.log('거짓');  // 원래는 안 뜨는데, else를 써줌으로써 '거짓'이라고 뜨게 해준 것임
+        }
+        // 0 이라 적으면, 거짓이니까 값이 안 나옴. 0은 거짓임
+        // 거짓 : 0, ''(빈 문자열), null, false, Undefined, NaN(Not a Number), -0, 0n(빅인트) // 자주쓰는 애들순으로 적음
+
+        const firstName = []
+        if(firstName.length){
+            console.log('참이라고 하네요')
+        }
+        // length 가 0임. 거짓임.
+        // 이런 경우는 거짓이기 때문에 안 나옴.
+
+        // 참 : 거짓 값에 해당하는 데이터를 제외한 모든 것들이 참임.
     </script>
 </body>
 </html>
