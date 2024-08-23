@@ -188,11 +188,34 @@
         // 다른 타입의 값이 들어오면 자동으로 타입을 변환해서 사용함.
         // 자바스크립트는 너무 자유로워서 개발자들이 코에걸면 코걸이 귀에 걸면 귀걸이라 그럴정도로 자유로운 언어임
 
+        /*
+        // 내가 푼 거
+
         let userWeight = parseInt(prompt('당신의 몸무게는?'));
-        let userheight = parseInt(prompt('당신의 키는?'));
+        let userHeight = parseInt(prompt('당신의 키는?'));
         
-        let result = (userheight - 100) * 0.9 < userWeight ? alert('살 좀 빼세요...') : alert('살 좀 찌세요');
+        let result = (userHeight - 100) * 0.9 < userWeight ? alert('살 좀 빼세요...') : alert('살 좀 찌세요');
         console.log(result);
+        */
+
+
+        // 쌤이 푼 거
+
+        const userWeight = prompt('당신의 몸무게는?', 170);
+        const userHeight = prompt('당신의 키는?', 70);
+        const BMI = (userHeight - 100) * 0.9 // 이순간만 묵시적 타입 변환
+
+        const resultBMI = userWeight > BMI ? '살 좀 빼세요' : '살 좀 찌세요';
+        alert(resultBMI);
+
+        if(resultBMI === '살 좀 빼세요'){
+            document.write('더 먹을건데?');
+        }else{
+            document.write('보태준 거 있냐?');
+        };
+
+
+
     </script>
 </body>
 </html>
